@@ -10,7 +10,7 @@ function BlogDetail() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/blogs/${id}`);
+        const response = await axios.get(`https://tousif-blog-project-production.up.railway.app/api/blogs/${id}`);
         setBlog(response.data.blog);
       } catch (err) {
         console.error('Failed to load blog:', err);

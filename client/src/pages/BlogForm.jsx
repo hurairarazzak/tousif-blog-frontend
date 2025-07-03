@@ -24,7 +24,7 @@ function BlogForm() {
 
   const loadBlogs = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/blogs');
+      const res = await axios.get('https://tousif-blog-project-production.up.railway.app/api/blogs');
       const latestFirst = res.data.blogs.sort(
         (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
       );

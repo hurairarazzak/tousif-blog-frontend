@@ -8,7 +8,7 @@ function AllBlogs() {
   useEffect(() => {
     const getBlogs = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/blogs');
+        const response = await axios.get('https://tousif-blog-project-production.up.railway.app/api/blogs');
         const latestFirst = response.data.blogs.sort(
           (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
         );
